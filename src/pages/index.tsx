@@ -3,40 +3,25 @@ import { Button } from "@/components/ui/button";
 import fonts from "@/fonts";
 import Background from "../../public/image.png";
 import OurObjective from "../../public/our_objective_1.png";
-import OurObjectiveII from "../../public/our_objective_2.png";
 
 import { AppStoreLogo, GooglePlayLogo, Globe, Heart } from "@phosphor-icons/react/dist/ssr";
+
+import { Menu } from "@/components/Menu";
 
 
 export default function Home() {
   return (
-   <div className="flex-1 bg-primary_white w-100 h-100">
-    <Image alt="background" placeholder="empty"
+   <div className="flex-1 bg-primary_white">
+    <Image alt="background" 
+      placeholder="blur"
       quality={100}
       fill
-      sizes="100vw"  src={Background}
+      src={Background}
+      sizes="100vw"
     />
 
     <div className="absolute">
-      <div className="flex flex-row pt-[30px] items-center justify-between px-[30px] w-[100vw] object-cover">
-        <p className={`${fonts.poppins_bold.className} text-[24px] text-primary_blue`}>W<span className="text-primary_aqua">3</span> Care</p>
-
-
-        <div className="hidden md:flex  flex-row items-center justify-between  pl-[10vw] w-[78vw]">
-          <div className="flex w-[48vw] justify-between">
-            <a className={`${fonts.poppins_regular.className} text-[.9em] cursor-pointer text-secondary_blue`}>Início</a>
-            <a className={`${fonts.poppins_regular.className} text-[.9em]  cursor-pointer text-secondary_blue`}>Consulte Conosco</a>
-            <a className={`${fonts.poppins_regular.className} text-[.9em]  cursor-pointer text-secondary_blue`}>Objetivo</a>
-            <a className={`${fonts.poppins_regular.className} text-[.9em]  cursor-pointer text-secondary_blue`}>Seja Voluntário</a>
-          </div>
-          
-          
-          <Button className="">Junte-se a nós!</Button>
-        </div>
-
-        <button className="md:hidden">open Drawer</button>
-      
-      </div>
+      <Menu />
 
 
       <div className="pt-[80px] pl-[50px] text-primary_blue">
@@ -77,21 +62,17 @@ export default function Home() {
      
       <div className="mt-[35vh] w-[100vw] flex flex-col items-center">
         <strong className={`${fonts.poppins_bold.className} text-[3.5rem] mb-[10vh] text-primary_blue`}>Nosso Objetivo</strong>
-        <div className="w-[100vw] pl-[20vw]">
+        <div className="w-[100vw] flex items-center justify-center pr-[1vw]">
           <Image alt="nosso objetivo" placeholder="blur"
             src={OurObjective}
-            sizes="70vw"
+            sizes="80vw"
             quality={100}
+            className="z-0"
             
           />
-          <Image alt="nosso objetivo" placeholder="blur"
-            quality={100}
-            sizes="45vh"
-            src={OurObjectiveII}
-            className="absolute bottom-[105vh] left-[55vw]"
-          />
+        
         </div>
-        <p className={`${fonts.poppins_thin.className} text-[1.5rem] w-[60vw] text-primary_blue text-left mt-[25vh]`}>A W3Care foi criada para ser uma rede de apoio psicológico para pacientes oncológicos e toda a família do paciente, com psicólogos voluntários disponíveis para darem o devido apoio na luta contra o câncer.<br/>Nosso objetivo é acompanhar o máximo de pacientes e familiares com excelência e fazer com que não se sintam sozinhos durante o tratamento oncológico porque sua luta é NOSSA luta!</p>    
+        <p className={`${fonts.poppins_thin.className} text-[1.5rem] w-[60vw] text-primary_blue text-left mt-[15vh]`}>A W3Care foi criada para ser uma rede de apoio psicológico para pacientes oncológicos e toda a família do paciente, com psicólogos voluntários disponíveis para darem o devido apoio na luta contra o câncer.<br/>Nosso objetivo é acompanhar o máximo de pacientes e familiares com excelência e fazer com que não se sintam sozinhos durante o tratamento oncológico porque sua luta é NOSSA luta!</p>    
 
       </div>
 
@@ -101,7 +82,10 @@ export default function Home() {
         <Button className="w-[280px] mt-[75px] text-primary_blue text-[1.1rem] drop-shadow-xl">Preencha o Formulário</Button>
 
       </div>
-      <footer className={`w-[100vw] items-center text-[1.2rem] pb-[15px] flex justify-center mt-[20vh] ${fonts.poppins_bold.className} text-primary_blue`}>Desenvolvido com amor por Otávio Stasiak <Heart className="ml-[2px] mb-[1px]" /></footer>
+
+      <footer className={`w-[100vw] items-center text-[1.2rem] pb-[15px] flex justify-center mt-[20vh] ${fonts.poppins_bold.className} text-primary_blue`}>
+        Desenvolvido com amor por Otávio Stasiak <Heart className="ml-[2px] mb-[1px]" />
+      </footer>
     
     </div>
 

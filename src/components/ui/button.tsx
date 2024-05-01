@@ -10,7 +10,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: `bg-secondary_aqua text-secondary_blue ${fonts.poppins_bold.className} hover:bg-primary_aqua/95`,
+        default: `bg-secondary_aqua text-secondary_blue ${fonts.poppins_bold.className} hover:scale-110 transition-transform`,
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
