@@ -66,6 +66,57 @@
     }
   }
 
+  .react-modal-overlay{
+    background: rgba(0,0,0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+};
+.react-modal-content{
+    display: flex;
+    padding: 1.5rem 0;
+    width: 40%;
+    height: 70%;
+    background: var(--background);
+    position: relative;
+    border-radius: 0.24rem;
+    align-items: center;
+    flex-direction: column;
+
+    @media(max-width: 1000px) {
+        width: 50%;
+    };
+
+    @media(max-width: 575px) {
+        width: 70%;
+    };
+
+    @media(max-width: 436px) {
+        width: 70%;
+        height: 35%;
+        align-items: center;
+        justify-content: space-between;
+    };
+
+}
+.react-modal-close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    border: 0;
+    background: transparent;
+    transition: 0.2s;
+    &:hover {
+        filter: brightness(0.8);
+    }
+}
+
+
   @layer base {
   
     body {
